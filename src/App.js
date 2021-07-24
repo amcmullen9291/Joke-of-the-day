@@ -1,7 +1,8 @@
 import './App.css'
 
 function App() {
-
+  let instructions = document.getElementById("click4note");
+  instructions.style.display = "none";
   const fetchJoke = async () => {
   let JokeObject;  
   
@@ -11,8 +12,9 @@ function App() {
   let box = document.getElementById("Jokes");
   let p = document.getElementById("setup");
   let punchline = document.getElementById("punchline");
+  let instructions = document.getElementById("click4note");
   punchline.style.display = "none";
-
+  instructions.style.display = "block"
 
     await fetch('https://official-joke-api.appspot.com/random_joke')
     .then(response => response.json())
@@ -34,6 +36,9 @@ function App() {
         buttonElement.disabled = false;
         p.innerText = "";
         punchline.innerText = "";
+        instructions.style.display= "block";
+        instructions.style.display = "none";
+
       })
     });
   };
@@ -45,13 +50,16 @@ function App() {
     <div className="App">
       <div id="top">
       <center><div className="header">JOKE-of-the-DAY</div></center>
+      <center><p id="click4note">"Click for the Punchline"</p></center>
 <br></br>
       <center><button onClick={fetchJoke} id="button">Today's Joke</button></center>
       <div id="Jokes"></div>
       <hr></hr>
       </div>
+      <div id="bottom">
       <center><div id="setup"></div>
       <div id="punchline"></div></center>
+      </div>
     </div>
     </>
   );
