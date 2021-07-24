@@ -1,0 +1,31 @@
+#top{
+  background: tan;
+}
+
+#todays_joke{
+  max-width: fit-content;
+
+}
+
+#Jokes{
+  max-width: fit-content;  
+}
+#setup{
+  max-width: fit-content;
+}
+#punchline{
+  max-width: fit-content;
+}
+
+#button{
+  background :hotpink;
+}
+
+.header{
+  font-family: cursive;
+  width: 15%;
+  height: 100v;
+  background: #312450;
+  font-size: 20px;
+  color: yellow;
+}
