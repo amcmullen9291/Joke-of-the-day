@@ -1,8 +1,8 @@
 import './App.css'
 
 function App() {
-  let instructions = document.getElementById("click4note");
-  instructions.style.display = "none";
+  // let instructions = document.getElementById("click4note");
+  // instructions.style.display = "none";
   const fetchJoke = async () => {
   let JokeObject;  
   
